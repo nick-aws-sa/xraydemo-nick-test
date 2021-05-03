@@ -1,5 +1,6 @@
 package com.example.springboot;
 
+import java.lang.System;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -8,7 +9,9 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "Greetings from Spring Boot and from Nick!";
+		System.out.print("Hello there!!!!!!");
+        return "Greetings from Spring Boot and from Nick!";
+        
 	}
 
 }
