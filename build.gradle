@@ -20,3 +20,9 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+// For enabling the agent when running locally
+bootRun {
+    String disco = "${System.getProperty("user.dir")}/disco"
+    jvmArgs = ["-javaagent:$disco/disco-java-agent.jar=pluginPath=$disco/disco-plugins"]
+}
